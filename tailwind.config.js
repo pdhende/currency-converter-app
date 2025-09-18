@@ -5,8 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cardColor: "#CCAFA5",
+        btnColor:"#EEEDE7",
+      },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}
-
+};
