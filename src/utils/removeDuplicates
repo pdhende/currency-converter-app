@@ -1,0 +1,17 @@
+// This function removes duplicate currency codes from the currency list
+
+export async function removeDuplicates (currencyList) {
+  try {    
+        const tempArr = new Set();
+        const filteredCurrency = currencyList.filter(({ currencyCode }) => {
+          if (tempArr.has(currencyCode)) return false;
+          tempArr.add(currencyCode);
+          return true;
+        });
+        return filteredCurrency;
+      }
+     catch (error) {
+    console.error('Error removing duplicates:', error)
+    throw error
+  }
+}
